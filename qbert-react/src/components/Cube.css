@@ -1,0 +1,27 @@
+.cube {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(45deg);
+}
+
+.cube::before,
+.cube::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.cube::before {
+  transform: rotateX(90deg) translateZ(25px);
+  background-color: inherit;
+  filter: brightness(70%);
+}
+
+.cube::after {
+  transform: rotateY(-90deg) translateZ(25px);
+  background-color: inherit;
+  filter: brightness(90%);
+}
